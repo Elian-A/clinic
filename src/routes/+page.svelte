@@ -1,2 +1,15 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import type { PageServerData } from './$types';
+
+	export let data: PageServerData;
+</script>
+
+<h1>root</h1>
+<p>Hi ....!</p>
+
+<pre>
+	{JSON.stringify(data, null, 2)}
+</pre>
+<form method="POST" action="/logout">
+	<button>Salir</button>
+</form>
