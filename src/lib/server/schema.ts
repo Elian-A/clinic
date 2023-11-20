@@ -1,4 +1,4 @@
-import { pgTable, serial, integer, timestamp, bigserial, text, varchar, boolean, unique } from "drizzle-orm/pg-core"
+import { pgTable, serial, integer, timestamp, bigserial, text, varchar, boolean, unique, date } from "drizzle-orm/pg-core"
 
 export const balanceTable = pgTable("balance", {
 	id: serial("id").primaryKey().notNull(),
@@ -61,8 +61,8 @@ export const patientTable = pgTable("patient", {
 	address: varchar("address", { length: 100 }).notNull(),
 	dni: integer("dni").notNull(),
 	telephone: varchar("telephone", { length: 20 }),
-	birthDate: timestamp("birth_date", { mode: 'string' }).notNull(),
-	createdAt: timestamp("created_at", { mode: 'string' }).defaultNow(),
+	birthDate: date("birth_date", { mode: 'string' }).notNull(),
+	createdAt: timestamp("created_at", { mode: 'string' }).defaultNow().notNull(),
 },
 	(table) => {
 		return {

@@ -47,5 +47,7 @@
 		<label for="telephone">Telefono:</label>
 		<input type="number" name="telephone" id="telephone" />
 	</div>
-	<button>Registrarse</button>
+	<button type="submit">Registrarse</button>
+	<span>or</span>
+	<a href="/login">Login</a>
 </form>

@@ -38,12 +38,11 @@ export const actions: Actions = {
 				path: '/',
 				maxAge: 60 * 60 * 24
 			})
-
-			throw redirect(302, '/professional')
 		} catch (error) {
 			console.error(error)
 			return fail(400, { server: true })
 		}
+		throw redirect(302, '/professional')
 
 	}
 };

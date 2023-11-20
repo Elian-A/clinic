@@ -23,4 +23,6 @@
 		<input type="password" name="password" id="password" required />
 	</div>
 	<button>Iniciar Session</button>
+	<span>or</span>
+	<a href="/signup">Sign up</a>
 </form>
